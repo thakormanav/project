@@ -1,118 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+    <!DOCTYPE html>
+    <html lang="en">
 
-            background-image:url(https://t4.ftcdn.net/jpg/02/70/46/43/360_F_270464397_cvBt3h6cgQJMPVhaVjDot1Dovn8rLryo.jpg) ;
-            
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
 
-        form {
-            width: 350px;
-            padding: 20px;
-           
-            border-radius: 5px;
-        }
+                background-image: url(https://e1.pxfuel.com/desktop-wallpaper/790/869/desktop-wallpaper-study-exam-time.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-          font-size: 20px;
-          color: rgb(255, 255, 255);
-          text-shadow: 0 0 9px black;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-        input {
-            width: 100%;
-            border-radius: 4px;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-            opacity: 70%;
-            font-size: 15px;
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-            background-color: black;
-        }
-button:hover{
-    background-color: rgb(18, 212, 40);
-    color: black;
-   
-}
-        button {
-            background-color: rgb(41, 157, 203);
-            color: rgb(255, 255, 255);
-            padding: 10px 15px;
-            border: none;
-            font-family: 'Times New Roman', Times, serif;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-    </style>
-</head>
-<body>
-
-    <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="button" onclick="login()">Login</button>
-    </form>
-    <script>
-        function login() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            // Basic validation (you can add more complex validation)
-            if (username === "" || password === "") {
-                alert("Please enter both username and password.");
-                return;
             }
 
-           
-            if (username === "silver ouk" && password === "sou") {
-                window.location.href=("menu.html");
-                return;
-
-            } 
+            form {
             
-            
-              
-            if (username === "student portal" && password === "bca") {
-                window.location.href=("https://studentportal.silveroakuni.ac.in/");
-
-
-            } 
-            
-            
-            
-            
-            
-            
-            else {
-                alert("Invalid username or password. Please try again.");
+                width: 350px;
+                height: 350px;
+                padding: 20px;
+                box-shadow: 0 0 5px black;
+    opacity: 70%;
+                border-radius: 5px;
+                align-items: center;
             }
-        }
-    </script>
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 20px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            input {
+                width: 80%;
+                border-radius: 4px;
+                padding: 8px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+                opacity:40%;
+                font-size: 15px;
+                font-family: 'Times New Roman', Times, serif;
+                color: rgb(255, 250, 250);
+                background-color: black;
+            }
+
+            button:hover {
+                background-color: rgb(254, 255, 254);
+                color: black;
+
+            }
+
+            button {
+                background-color: rgb(41, 157, 203);
+                color: rgb(0, 0, 0);
+                padding: 10px 15px;
+                border: none;
+                font-family: 'Times New Roman', Times, serif;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 15px;
+            }
+            h1{
+                font-size:25px;
+            text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <form id="loginForm">
+            
+            <h1>Login page</h1>
+            <br>
+        
+        
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+    <BR>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+
+        <script>
+            function login() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                // Basic validation (you can add more complex validation)
+                if (username === "" || password === "") {
+                    alert("Please enter both username and password.");
+                    return;
+                }
 
 
-</body>
-</html>
+                if (username === "silver ouk" && password === "bca") {
+                    window.location.href = ("menu.html");
+    return;
+                }
+
+
+
+                if (username === "student portal" && password === "sou") {
+                    window.location.href = ("https://studentportal.silveroakuni.ac.in/");
+                }
+
+
+
+
+
+
+
+
+                else {
+                    alert("Invalid username or password. Please try again.");
+                }
+            }
+        </script>
+
+    </body>
+
+    </html>
